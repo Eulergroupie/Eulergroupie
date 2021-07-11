@@ -1,0 +1,80 @@
+* {
+    background-color:rgb(32,32,32);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 5%;
+    max-width: 1280px;
+    text-align: center;
+}
+
+main {
+    color: rgb(8, 150, 150);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+b {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: slategrey;
+    color: black;
+    font-weight: 600;
+}
+
+h1, h2, h3, p {
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    color: rgb(192, 144, 21);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(26, 70, 202);
+}
+
+h3 {
+    color: rgb(18, 102, 18);
+}
+
+td {
+  border: 1px solid cyan;
+  text-align: left;
+}
+
+th {
+  border: 2px solid cyan;
+}
+
+aside, aside p, aside h3{
+    /*background-color: rgb(3, 41, 41);*/
+}
+
+aside h3 {
+    color: rgb(7, 85, 18);
+}
+
+.profilePic img {
+    width: 10%;
+    border-radius: 50%
+}
+
+ul {
+    text-align: left;
+  
+}
+
+nav ul li {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    font-size: 200%;
+    margin: 5px;
+    padding: 5px;
+}
