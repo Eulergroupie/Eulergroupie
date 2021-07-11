@@ -19,7 +19,7 @@ p {
 
 b {
     font-family: 'Courier New', Courier, monospace;
-    background-color: slategrey;
+    background-color: rgb(83, 97, 110);
     color: black;
     font-weight: 600;
 }
@@ -44,12 +44,12 @@ h3 {
 }
 
 td {
-  border: 1px solid cyan;
+  border: 1px solid rgb(21, 101, 180);
   text-align: left;
 }
 
 th {
-  border: 2px solid cyan;
+  border: 2px solid dodgerblue;
 }
 
 aside, aside p, aside h3{

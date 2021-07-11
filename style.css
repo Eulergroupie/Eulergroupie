@@ -24,6 +24,8 @@ body {
   color:white;
   background-color: lightcyan;
   background-image: url('https://newevolutiondesigns.com/images/freebies/nature-hd-background-2.jpg');
+  max-width: 1880px;
+  margin: 0 20px;
 }
 
 h1 {
