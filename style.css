@@ -1,4 +1,18 @@
-img {
+.profile_pic p {
+  display: inline-block;
+  max-width: 500px;
+  vertical-align: top;
+}
+
+.profile_pic img {
+  display: inline;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.entry img {
   /*initial style for img*/
   height: 50px;
   /*additional styles*/
@@ -21,7 +35,7 @@ p {
   font-weight: bold;
 }
 
-main {
+.entry {
   text-align: right;
 }
 
