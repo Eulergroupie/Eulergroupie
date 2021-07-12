@@ -19,7 +19,7 @@ p {
 
 b {
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(83, 97, 110);
+    background-color: rgba(83, 97, 110, 0.9);
     color: black;
     font-weight: 600;
 }
@@ -31,7 +31,7 @@ h1, h2, h3, p {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
-    color: rgb(192, 144, 21);
+    color: rgba(192, 144, 21, 0.95);
     text-align: center;
 }
 
@@ -44,20 +44,12 @@ h3 {
 }
 
 td {
-  border: 1px solid rgb(21, 101, 180);
+  border: 1px solid rgba(21, 101, 180, 0.5);
   text-align: left;
 }
 
 th {
-  border: 2px solid dodgerblue;
-}
-
-aside, aside p, aside h3{
-    /*background-color: rgb(3, 41, 41);*/
-}
-
-aside h3 {
-    color: rgb(7, 85, 18);
+  border: 2px solid rgba(28, 135, 241, 0.5);
 }
 
 .profilePic img {
@@ -77,4 +69,21 @@ nav ul li {
     font-size: 200%;
     margin: 5px;
     padding: 5px;
+}
+
+a:link {
+  color: black;
+  background-color: rgb(16, 79, 141);
+  padding: 2px;
+}
+
+a:visited {
+  color: black;
+  background-color: rgb(16, 79, 141);
+  padding: 2px;
+}
+
+.tutorial {
+  display: inline-block;
+  width: 150px;
 }
