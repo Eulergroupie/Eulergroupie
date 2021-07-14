@@ -74,13 +74,23 @@ a:visited {
   padding: 2px;
 }
 
-.tutorial {
-  display: inline-block;
-  width: 150px;
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
 }
 
-#cademy {
+#navbar a{
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
-  font-size: 200%;
-  color: rgb(16, 79, 141);
+  padding: 14px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background: rgba(192, 144, 21, 0.95);
+  color: black;
 }
