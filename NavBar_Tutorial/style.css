@@ -30,7 +30,9 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* Navigation Bar = List of Links */
+/* Remove bullets and extra space (padding and margin) */
+/****************************************************************/
 .navbar00 ul {
   list-style-type: none;  /* remove bullets */
   margin: 0;
@@ -38,7 +40,9 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* Make blocks with background color, remove underscores, and add
+   a hover effect */
+/****************************************************************/
 .navbar01 ul {
   list-style-type: none;
   margin: 0;
@@ -58,7 +62,8 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* An active link indicator (current page) can be added */
+/****************************************************************/
 .navbar02 ul {
   list-style-type: none;  /* remove bullets */
   margin: 0;
@@ -83,7 +88,9 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* Center text in the blocks, add padding, add borders, and
+   disable hover on active selection */
+/****************************************************************/
 .navbar03 ul {
   list-style-type: none;  /* remove bullets */
   margin: 0;              
@@ -121,7 +128,9 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* Small Horizontal Nav Bars
+   Simple inline */
+/****************************************************************/
 .navbar04 ul {
   list-style-type: none;  /* remove bullets */
   margin: 0;
@@ -149,7 +158,8 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* Floating blocks for more control over spacing */
+/****************************************************************/
 .navbar05 ul {
   list-style-type: none;  /* remove bullets */
   margin: 0;
@@ -179,7 +189,9 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* A background color is added to the list instead of each link to
+   create a full-width background color */
+/****************************************************************/
 .navbar06 ul {
   list-style-type: none;
   padding: 0;
@@ -209,7 +221,8 @@ footer li:last-child {
 }
 
 /****************************************************************/
-
+/* Let's change style to a dark theme */
+/****************************************************************/
 .navbar07 ul {
   list-style-type: none;  /* remove line breaks */
   margin: 0;
@@ -227,7 +240,7 @@ footer li:last-child {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none;  /* remove underscores */
 }
 
 .navbar07 li a:hover:not(.active) {
