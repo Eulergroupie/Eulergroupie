@@ -1,11 +1,13 @@
 function draw() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
+    const julia_canvas = document.getElementById('julia-canvas');
+    const jtx = julia_canvas.getContext('2d');
     
     // Basic scale setup
     let iterations = 8;// 1822;   // maximum loop count per pixel
     let range = 4; // 0.0006104;          // +/- 2 units on the x-axis
-    //plotFractal(-0.89240009, -0.22731138, range, iterations, canvas, ctx);
+    plotFractal(-0.8180664062499996, -0.19941406249999982, 0.3125, 77, julia_canvas, jtx);
     plotFractal(0, 0, range, iterations, canvas, ctx);
 
     // Document References for real-time
@@ -26,7 +28,7 @@ function draw() {
     canvas.addEventListener('contextmenu', (e) => {
         e.preventDefault();
         range *= 2;
-        plotFractal(x_coord.innerHTML, y_coord.innerHTML, range, iterations, canvas, ctx);
+        plotFractal(x_coord.innerHTML, -y_coord.innerHTML, range, iterations, canvas, ctx);
     });
 
     canvas.addEventListener('mousedown', (e) => {
@@ -37,7 +39,7 @@ function draw() {
             case 1:
                 break;
         }
-        plotFractal(x_coord.innerHTML, y_coord.innerHTML, range, iterations, canvas, ctx);
+        plotFractal(x_coord.innerHTML, -y_coord.innerHTML, range, iterations, canvas, ctx);
         iter_max.innerHTML = iterations;
     }); 
 }
@@ -59,7 +61,7 @@ function plotFractal(a_center, b_center, range, iter_count, canvas, ctx) {
     plotColorSpectrum(iter_count, color_spectrum, stx);
     // Record Frame
     document.getElementById('a-center').innerHTML = a_center;
-    document.getElementById('b-center').innerHTML = b_center;
+    document.getElementById('b-center').innerHTML = -b_center;
     document.getElementById('range').innerHTML = range;
     document.getElementById('iter-max').innerHTML = iter_count;
  
@@ -69,13 +71,15 @@ function plotFractal(a_center, b_center, range, iter_count, canvas, ctx) {
     let z_sqr_1, z_sqr_2;  // a^2 and b^2
     let x, y;  // canvas coordinates, origin (0, 0) upper left
     let a, b;  // a+bi complex coordinates, center origin
+    let escape_count = 0;
+
 
     for(y = 0; y < canvas.height; y++) {        // loop through rows
-        b = -b_bottom - y * x_scale;             // imaginary component matches x_scale
+        b = b_bottom + y * x_scale;             // imaginary component matches x_scale
         for(x = 0; x < canvas.width; x++) {     // loop through columns
             a = a_left + x * x_scale;           // real component of complex plane
             let z = [a, b];                         // coordinate vector
-            let c = [a, b];//[-0.892, -0.227];      // seed vector
+            let c = [a, b];  //[-0.892, -0.227];    // seed vector
             for(let j = 0; j < iter_count; j++) {   // loop through iterations
                 z_sqr_1 = z[0] * z[0]; z_sqr_2 = z[1] * z[1];
                 // iterative function z->z^2 + c
@@ -91,7 +95,7 @@ function plotFractal(a_center, b_center, range, iter_count, canvas, ctx) {
       
     canvas.addEventListener('mousemove', (e) => {
         x_coord.innerHTML = a_left + e.offsetX * x_scale;
-        y_coord.innerHTML = b_bottom + e.offsetY * x_scale;
+        y_coord.innerHTML = -(b_bottom + e.offsetY * x_scale);
         });
 }
 
