@@ -1,4 +1,8 @@
-### Hi there 👋
+###I'm currently learning...
+Web development. Here is my site  https://eulergroupie.github.io/Eulergroupie/
+
+###I'm currently working on...
+Making a portfolio starter web-site for sharing content while social networking.
 
 <!--
 **Eulergroupie/Eulergroupie** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
